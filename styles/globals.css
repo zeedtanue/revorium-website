@@ -6,6 +6,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.navcontainer {
+  min-height: 60vh;
+  padding: 0 2rem;
+  background-color: #060666;
+  color: #FFFFFF;
+}
+
 a {
   color: inherit;
   text-decoration: none;
