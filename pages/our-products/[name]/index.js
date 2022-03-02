@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
+import styles from '../../../styles/Home.module.css'
 
-export default function Home() {
+export default function SingleProduct() {
+  const { query } = useRouter()
+  const { name } = query;
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +16,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Blog
+          Welcome to Product {name}
         </h1>
 
         
