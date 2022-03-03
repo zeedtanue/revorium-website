@@ -28,7 +28,10 @@ export default makeStyles(({ breakpoints }) => ({
     card: {
         maxWidth:280,
         padding:20,
-        margin:30
+        margin:30,
+        minHeight:300,
+        marginBottom:90,
+        marginTop:50
     },
     image: {
         paddingRight: 20,
@@ -71,10 +74,11 @@ export default makeStyles(({ breakpoints }) => ({
         paddingRight:20
     },
     goalCardContainer: {
+        display: 'flex',
         alignSelf:'center',
-        margnin:30,
-        alignItems: 'center',
-        alignContent: 'center',
+        margnin:80,
+        marginBottom:100,
+        justifyContent: 'center'
 
     }
     
