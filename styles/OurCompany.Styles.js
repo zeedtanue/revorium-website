@@ -27,8 +27,9 @@ export default makeStyles(({ breakpoints }) => ({
     },
     card: {
         maxWidth:280,
+        minWidth:280,
         padding:20,
-        margin:30,
+        margin:65,
         minHeight:300,
         marginBottom:90,
         marginTop:50
@@ -48,12 +49,19 @@ export default makeStyles(({ breakpoints }) => ({
         minHeight: 90,
         paddingTop: 80,
         paddingLeft:220,
-        paddingRight:220
+        paddingRight:220,
+        justifyContent:'center'
+
+    },
+    valuePara: {
+        display: 'flex',
+        minWidth: 250,
+        justifyContent:'center'
     },
     valueContainerRow: {
         display: 'flex',
         flexDirection: 'row',
-        alignSelf: 'center',
+        justifyContent: 'center'
 
         
     },
@@ -66,7 +74,6 @@ export default makeStyles(({ breakpoints }) => ({
         paddingLeft: 25,
         paddingBottom: 15,
         background: 'white',
-        flexDirection: 'row',
         minWidth: 210,
     },
     valueImg: {
@@ -74,11 +81,7 @@ export default makeStyles(({ breakpoints }) => ({
         paddingRight:20
     },
     goalCardContainer: {
-        display: 'flex',
-        alignSelf:'center',
-        margnin:80,
         marginBottom:100,
-        justifyContent: 'center'
 
     }
     
