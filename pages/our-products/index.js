@@ -1,9 +1,25 @@
+import { Card, 
+  CardContent, 
+  CardMedia, 
+  Typography, 
+  Button, 
+  CardActionArea, 
+  CardActions } from '@material-ui/core'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../../styles/OurProducts.module.css'
-import { makeStyles } from '@material-ui/core/styles'
+import useStyles from '../../styles/Products.Styles'
 
 export default function Product() {
+  const [featureData, setFeatureData] = useState([
+    {image: '/blockchain-vector.png', title: 'Blockchain Tecnology', details: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'},
+    {image: '/blockchain-vector.png', title: 'Blockchain Tecnology', details: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'},
+    {image: '/blockchain-vector.png', title: 'Blockchain Tecnology', details: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'},
+    {image: '/blockchain-vector.png', title: 'Blockchain Tecnology', details: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'},
+
+  ])
+
   const classes = useStyles()
   return (
     <div className={styles.container}>
@@ -26,7 +42,7 @@ export default function Product() {
             </div>
             <img src='/our-company.png' />
           </div>
-        <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:80 }}> 
+        <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:20 }}> 
         
           <p className='title' style={{ alignSelf:'center' }}>The Main Feature That <br/> We Will Make</p>
           
@@ -34,23 +50,34 @@ export default function Product() {
         <div class="columns">
         <div class="column">
           </div>
-          <div class="column"   style={classes.title}>
-            First column
-          </div>
-          <div class="column">
-            Second column
-          </div>
-          <div class="column">
-            Third column
-          </div>
-          <div class="column">
-            Fourth column
-          </div>
+          {featureData.map((item)=>
+          <div class={`column ${classes.mainFeatureBox}`} >
+            
+          <Card className={classes.card}>
+          <CardActionArea>
+           <img className={classes.cardImage} src={item.image} />
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+              {item.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {item.details}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+
+        </div>
+          )}
+          
+          
           <div class="column">
           </div>
           
         </div>
-        
+        <div className={classes.spacing }>
+
+          </div>
       </body>
 
       
@@ -61,10 +88,4 @@ export default function Product() {
 
 
 
-const useStyles = makeStyles(theme => ({
-  box :{
-    flex: 1,
-    borderWidth:1
-  },
-  
-}))
+
