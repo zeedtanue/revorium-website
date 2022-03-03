@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return (
         <div>  
-            <nav style={{ height: 30, padding:20 }} className="container navbar is-tranparent is-bold">
+            <nav className="container navbar is-tranparent is-bold">
                 <div className="container">
                     <Link passHref href={"/"}>
                 <div className="navbar-brand">

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@702&family=Roboto&display=swap');
+
 html,
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .navcontainer {
@@ -20,4 +22,7 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.ourcompany {
+  max-width: 70%;
 }

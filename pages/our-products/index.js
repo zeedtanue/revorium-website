@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/OurProducts.module.css'
+import { makeStyles } from '@material-ui/core/styles'
 
 export default function Product() {
+  const classes = useStyles()
   return (
     <div className={styles.container}>
       <Head>
@@ -11,15 +13,58 @@ export default function Product() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Our Product
-        </h1>
-
+      <body>
+          <div className='columns ourcompany' style={{ background: '#324A9F', display:'flex', flex:1, marginTop:20,marginBottom:20 }}>
+            <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:80 }}> 
+              <p className='title' style={{ color:'white', alignSelf:'center' }}>OUR PRODUCT</p>
+              <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+               </p>
+               <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
+                Home > Our Products > Fair Ride
+               </p>
+            </div>
+            <img src='/our-company.png' />
+          </div>
+        <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:80 }}> 
         
-      </main>
+          <p className='title' style={{ alignSelf:'center' }}>The Main Feature That <br/> We Will Make</p>
+          
+        </div>  
+        <div class="columns">
+        <div class="column">
+          </div>
+          <div class="column"   style={classes.title}>
+            First column
+          </div>
+          <div class="column">
+            Second column
+          </div>
+          <div class="column">
+            Third column
+          </div>
+          <div class="column">
+            Fourth column
+          </div>
+          <div class="column">
+          </div>
+          
+        </div>
+        
+      </body>
 
       
     </div>
   )
+
 }
+
+
+
+const useStyles = makeStyles(theme => ({
+  box :{
+    flex: 1,
+    borderWidth:1
+  },
+  
+}))

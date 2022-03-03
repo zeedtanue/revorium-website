@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Banner } from '../../components/Banner'
 import styles from '../../styles/Home.module.css'
 
 export default function ContactUs() {
@@ -11,13 +12,14 @@ export default function ContactUs() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <body>
+        <Banner/>
         <h1 className={styles.title}>
           Welcome to Contact us
         </h1>
 
         
-      </main>
+      </body>
 
       
     </div>
