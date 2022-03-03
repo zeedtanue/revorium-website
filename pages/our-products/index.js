@@ -8,6 +8,7 @@ import { Card,
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import UpcomingProjectsCarousel from '../../components/UpcomingProjectsCarousel'
 import styles from '../../styles/OurProducts.module.css'
 import useStyles from '../../styles/Products.Styles'
 
@@ -42,14 +43,19 @@ export default function Product() {
             </div>
             <img src='/our-company.png' />
           </div>
+          <div className='mt-6'></div>
+          <UpcomingProjectsCarousel/>
+          <div className='mt-6'></div>
+
         <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:20 }}> 
         
           <p className='title' style={{ alignSelf:'center' }}>The Main Feature That <br/> We Will Make</p>
           
         </div>  
+
+
         <div class="columns">
-        <div class="column">
-          </div>
+        
           {featureData.map((item)=>
           <div class={`column ${classes.mainFeatureBox}`} >
             
@@ -71,8 +77,7 @@ export default function Product() {
           )}
           
           
-          <div class="column">
-          </div>
+          
           
         </div>
         <div className={classes.spacing }>
