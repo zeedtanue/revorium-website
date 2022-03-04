@@ -21,18 +21,26 @@ export default function Company() {
       </Head>
 
       <main>
-      <section class="hero is-small-large is-link has-text-centered">
-        <div class="hero-body">
-          <p class="title">
-            Our Mission
-            
-          </p>
-          <p class="subtitle">
-          Home > Our Misson
-            
-          </p>
-        </div>
-      </section>
+      <div className=' has-text-centered ourcompany' 
+          style={{ 
+            justifyContent:'center',
+            padding:80 ,
+            background: '#324A9F', 
+            display:'flex', 
+            flex:1, 
+            backgroundImage: " url('/polygon-luminary.png')",  
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+            }}>
+            <div className='has-text-centered' > 
+              <p className='title' style={{ color:'white', alignSelf:'center' }}>Our Mission</p>
+
+              <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
+                Home > Mission 
+               </p>
+               
+            </div>
+          </div>
       <div className={classes.container}>
       <h2 className='mb-6'>
         About Us
@@ -95,12 +103,15 @@ The constant evolution of our society and innovative implementation of tools we 
             Values
 
           </h2>
-          <p className=''>The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:</p>
-        <div style={{ alignSelf:'center', justifyContent:'center', alignItems:'center',alignContent:'center', paddingLeft:120 , paddingBottom: 80}} >
+          {/* <p>
+          The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:
+          </p> */}
+          <p className={classes.valuePara}>The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:</p>
+        <div style={{ paddingBottom: 80}} >
           <div className={classes.valueContainerRow}>
             <div className={classes.valueBox}>
-            <img className={classes.valueImg} src='/light-vector.png' />
-            <p>Aspiration & <br/> Inovation</p>
+              <img className={classes.valueImg} src='/light-vector.png' />
+              <p>Aspiration & <br/> Inovation</p>
             </div>
 
             <div className={classes.valueBox}>
@@ -139,6 +150,7 @@ The constant evolution of our society and innovative implementation of tools we 
         <div className='has-text-centered mt-6'>
           <h2>Goals of <br/> Revorium Are:</h2>
           <div className={`columns ${classes.goalCardContainer}`}>
+            <div className='column'></div>
             {goals.map((item)=>
             <Card className={`column ${classes.card}`}>
               <h4>{item.title}</h4>
@@ -148,6 +160,8 @@ The constant evolution of our society and innovative implementation of tools we 
             </Card>
             
             )}
+            <div className='column'></div>
+
             
 
           </div>
