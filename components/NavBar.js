@@ -6,14 +6,14 @@ const NavBar = () => {
     const [isActive, setisActive] = useState(false);
 
     return (
-        <div>  
+        <div style={{ minHeight:70, display:'flex' }}>  
             <nav className="container navbar is-tranparent is-bold">
                 <div className="container">
                     <Link passHref href={"/"}>
                 <div className="navbar-brand">
                     
                     <a className="navbar-item is-size-2 has-text-weight-bold" href="../">
-                    <img style={{ height:300  , width:200 }} src="/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="268" height="100"/>
+                    <img style={{ minHeight:50,  maxWidth:200 }} src="/logoBig.png" alt="Bulma: a modern CSS framework based on Flexbox" width="268" height="100"/>
 
                     </a>
                     <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -41,23 +41,13 @@ const NavBar = () => {
                         <a  style={{ fontSize:14, font: 'Nunito' }} className="navbar-link">
                           SERVICE
                         </a>
-                      </Link>
+                        </Link>
                       <div className="navbar-dropdown">
-                      <Link passHref href={'/service/Service 1'}>
+                      <Link passHref href={'/service'}>
                           <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Service 1
+                            Software Development
                           </a>
                         </Link>
-                        <Link passHref href={'/service/Service 2'}>
-                          <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Service 2
-                          </a>
-                        </Link><Link passHref href={'/service/service 2'}>
-                          <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Service 3
-                          </a>
-                        </Link>
-          
                         </div>
                     </div>
                     <div className="navbar-item has-dropdown is-hoverable">
@@ -68,20 +58,12 @@ const NavBar = () => {
                       </Link>
                       
                       <div className="navbar-dropdown">
-                        <Link passHref href={'/our-products/Product 1'}>
+                        <Link passHref href={'/our-products'}>
                           <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Product 1
+                            Fair Ride
                           </a>
                         </Link>
-                        <Link passHref href={'/our-products/Product 2'}>
-                          <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Product 2
-                          </a>
-                        </Link><Link passHref href={'/our-products/Product 3'}>
-                          <a style={{ fontSize:14, font: 'Nunito' }} className="navbar-item">
-                            Product 1
-                          </a>
-                        </Link>
+                        
           
                         </div>
                     </div>

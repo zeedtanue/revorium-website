@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Styles from '../styles/Footer.module.css'
 function Footer() {
@@ -12,21 +13,26 @@ function Footer() {
                         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                     </div>
                     <div className="column is-2 is-offset-1">
-                    <p style={{ fontSize: 22, fontWeight:'bold' }} className={Styles.text} >Our Service</p>
-
-                        <p>Pricing</p>
-                        <p>Tracking</p>
-                        <p>Report A Bug</p>
-                        <p>Terms of Service</p>
+                    <Link passHref href="/service">
+                    <a style={{ fontSize: 22, fontWeight:'bold', paddingBottom:10 }} className={Styles.text} >Our Service</a>
+                    </Link>
+                      <Link passHref href="/service">
+                        <a>Software Developmen</a>
+                      </Link>
+                      <Link passHref href="/our-products">
+                        <a>Fair Ride</a>
+                      </Link>
+                        
 
 
                     </div>
                     <div className="column is-2 is-offset-1">
-                    <p style={{ fontSize: 22, fontWeight:'bold' }} className={Styles.text} >Our Company</p>
-                        <p>Reporting</p>
-                        <p>Get in Touch</p>
-                        <p>Management</p>
-                        <p>Terms of Service</p>
+                      <Link passHref href="/company">
+                        <a style={{ fontSize: 22, fontWeight:'bold', paddingBottom:10 }} className={Styles.text} >Our Company</a>
+                      </Link>
+                      <Link passHref href="/company">
+                        <a>Info</a>
+                      </Link>
 
 
                     </div>
