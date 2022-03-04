@@ -9,10 +9,12 @@ export default makeStyles(({ breakpoints }) => ({
       borderWidth: 1,
     },
     card: {
-        minWidth:250,
-        minHeight: 400
+        minWidth:220,
+        
     },
     cardImage: {
+        height: 50,
+        width: 50,
         paddingLeft: 20,
         paddingTop:20,
         margin: 20

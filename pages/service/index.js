@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Head from 'next/head'
 import UpcomingProjectsCarousel from '../../components/UpcomingProjectsCarousel'
 import useStyles from '../../styles/Service.Styles'
+import Link from 'next/link'
 
 const getStarted = [
   {
@@ -120,10 +121,12 @@ const Service = () => {
                 <Typography variant='p' component='div'>
                 Thinking insights, verified driven research, and metrics data help make decisions! 
                 </Typography>
-                <Button className='mt-4' color='white' 
+                <Link passHref href='/contact-us'>
+                  <Button  className='mt-4' color='white' 
                     backgroundColor="#020283">
                     Contact Us
                     </Button>
+                </Link>
               </div>
 
             </div>

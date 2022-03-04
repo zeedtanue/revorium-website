@@ -33,9 +33,10 @@
   
   .footer a {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    line-height: 2rem;
     flex-grow: 1;
+    color: #FFFFFF;
+
   }
   
   .title a {
@@ -73,6 +74,7 @@
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
       Bitstream Vera Sans Mono, Courier New, monospace;
   }
+  
   
   .grid {
     display: flex;

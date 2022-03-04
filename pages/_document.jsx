@@ -1,6 +1,7 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/styles'
+import { ServerStyleSheet } from 'styled-components'
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 const theme = responsiveFontSizes(createMuiTheme())
@@ -51,6 +52,7 @@ class MyDocument extends Document {
 
 MyDocument.getInitialProps = async ctx => {
   // Render app and page and get the context of the page with collected side effects.
+  const styledComponentSheets = new ServerStyleSheet() 
   const sheets = new ServerStyleSheets()
   const originalRenderPage = ctx.renderPage
 
@@ -68,6 +70,7 @@ MyDocument.getInitialProps = async ctx => {
       <React.Fragment key="styles">
         {initialProps.styles}
         {sheets.getStyleElement()}
+        {styledComponentSheets.getStyleElement()}
       </React.Fragment>
     ]
   }

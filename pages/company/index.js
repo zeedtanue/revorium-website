@@ -1,4 +1,4 @@
-import { Card } from '@material-ui/core'
+import { Card, Typography } from '@material-ui/core'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -106,38 +106,40 @@ The constant evolution of our society and innovative implementation of tools we 
           {/* <p>
           The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:
           </p> */}
-          <p className={classes.valuePara}>The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:</p>
+          <Typography className={classes.valuePara}>The core values of Revorium act as a foundattion of our company, and are directly reflected in the services that we’re providing to our clients and users. By committing to uphold these values, we strive to deliver you products as if we were developing them for ourselves, and as such, our main principles are based on:</Typography>
         <div style={{ paddingBottom: 80}} >
-          <div className={classes.valueContainerRow}>
-            <div className={classes.valueBox}>
+          <div className={`columns ${classes.valueContainerRow}`}>
+            <div className={`column ${classes.valueBox}`}>
               <img className={classes.valueImg} src='/light-vector.png' />
               <p>Aspiration & <br/> Inovation</p>
-            </div>
+             </div>
 
-            <div className={classes.valueBox}>
+             <div className={`column ${classes.valueBox}`}>
+
             <img className={classes.valueImg} src='/dedication-vector.png' />
             <p>Dedication</p>
             </div>
 
-            <div className={classes.valueBox}>
+            <div className={`column ${classes.valueBox}`}>
+
             <img className={classes.valueImg} src='/reliability-vector.png' />
             <p>Reliability </p>
             </div>
 
           </div>
           
-          <div className={classes.valueContainerRow}>
-            <div className={classes.valueBox}>
+          <div className={`columns ${classes.valueContainerRow}`}>
+          <div className={`column ${classes.valueBox}`}>
             <img className={classes.valueImg} src='/security-vector.png' />
             <p>Safety & <br/> Security</p>
             </div>
 
-            <div className={classes.valueBox}>
+            <div className={`column ${classes.valueBox}`}>
             <img className={classes.valueImg} src='/responsibility.png' />
             <p>Responsibility</p>
             </div>
 
-            <div className={classes.valueBox}>
+            <div className={`column ${classes.valueBox}`}>
             <img className={classes.valueImg} src='/unity-vector.png' />
             <p>Unity</p>
             </div>

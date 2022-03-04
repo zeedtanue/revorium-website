@@ -4,18 +4,19 @@ import { Card,
   CardActionArea, 
   CardActions } from '@material-ui/core'
 import Head from 'next/head'
+import Link from 'next/link'
 import { Button } from '../components/StyledComponent'
-import useStyles from '../styles/Products.Styles'
+import useStyles from '../styles/Home.Styles'
 export default function Home() {
 
   const classes = useStyles()
 
   const servicesData = [
     {title: 'Software Development', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
-    {title: 'Blockchain Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
-    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'Blockchain Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/blockchain-vector.png'},
+    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/ai-vector.png'},
     {title: 'Software Developmen', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
-    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/ai-vector.png'},
 
   ]
 
@@ -49,8 +50,9 @@ export default function Home() {
               We focus on the future to improve the present. By developing our own technology based on Blockchain and AI, we are aiming to empower companies from different facets of the corporate world by providing personalized, accessible, effective, and practical solutions for them. We strive to eliminate  the necessary presence of the midtdlemen in your business and provide you with an opportunity to pave the road for your business the way you see fit.
               </Typography>
               </div>
-              <Button color='#020283'>Let's Talk</Button>
-              
+              <Link passHref href='/contact-us'>
+                <Button color='#020283'>Let's Talk</Button>
+              </Link>
 
               
                
@@ -66,8 +68,10 @@ export default function Home() {
               </Typography>
           </div>
           <div className='column is-half is-offset-1 mt-4'>
-            <Button backgroundColor='#020283' color='white'>See More</Button>
+            <Link passHref href='/service'>
 
+              <Button backgroundColor='#020283' color='white'>See More</Button>
+            </Link>
           </div>
 
         </div>
@@ -114,7 +118,6 @@ export default function Home() {
                padding:30,
                maxWidth: 964,
                alignSelf:'center',
-               maxHeight:311, 
                backgroundColor:'white' }}>
                <div className='columns'>
                  <img className='column' src='/logoBig.png' style={{ height:100, maxWidth:400}}/>
@@ -126,8 +129,9 @@ export default function Home() {
                </Typography>
 
              </div>
-             <Button className='mt-4' style={{ alignSelf:'center' }} backgroundColor='#020283' color='white'>See More</Button>
-
+             <Link passHref href='/our-products'>
+               <Button className='mt-4' style={{ alignSelf:'center' }} backgroundColor='#020283' color='white'>See More</Button>
+             </Link>
 
 
 
@@ -142,7 +146,6 @@ export default function Home() {
             maxWidth: 1100,
             minHeight: 220,
             marginBottom:-100,
-            maxHeight:120,
             background: '#020283', 
             display:'flex', 
             flex:1, 
@@ -150,15 +153,17 @@ export default function Home() {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover'
             }}>
-              <div className='column is-half'>
+              <div className='column is-half is-offset-2'>
               <Typography variant='h2' component='h2' style={{ color:'white' }}>
               Have an idea in mind? 
 Get in touch with us and let's begin working on it!
               </Typography>
               </div>
-              <div className='column'>
-              <Button  color='#020283'>See More</Button>
+              <div className='column is-half is-offset-1 mt-4'>
+              <Link passHref href='/contact-us'>
 
+                <Button  color='#020283'>See More</Button>
+              </Link>
                 </div>            
           </div>
 
