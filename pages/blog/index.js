@@ -3,8 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 import useStyles from '../../styles/Blog.Styles'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CardActionArea } from '@mui/material'
+import axios from 'axios'
 
 export default function Blog() {
   const classes = useStyles()
@@ -17,8 +18,18 @@ export default function Blog() {
     {author: 'Jonny Liam',date: '12 Februari 2022', title: '5 Facts to Know About Blockchain & Cryptocurrency', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'},
 
   ])
-
-
+  const getCategory = async () => {
+    const { data } = await axios({
+      url: 'https://admin.revorium.com/api/category/getallcategory',
+      method: 'GET'
+    })
+    console.log('hey')
+    alert('hey')
+  }
+  useEffect(() => {
+    getCategory
+  }, [])
+  
   return (
     <div>
       <Head>

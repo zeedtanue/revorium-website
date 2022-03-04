@@ -45,22 +45,22 @@ export default makeStyles(({ breakpoints }) => ({
         maxWidth: 500
     },
     valuesContainer:{
+        display: 'flex',
+        flexDirection: 'column',
         backgroundColor: '#F9F9FC',
         minHeight: 90,
         paddingTop: 80,
-        paddingLeft:220,
-        paddingRight:220,
-        justifyContent:'center'
 
     },
     valuePara: {
         display: 'flex',
         minWidth: 250,
+        maxWidth:750,
+        alignSelf: 'center',
         justifyContent:'center'
     },
     valueContainerRow: {
         display: 'flex',
-        flexDirection: 'row',
         justifyContent: 'center'
 
         
@@ -74,7 +74,7 @@ export default makeStyles(({ breakpoints }) => ({
         paddingLeft: 25,
         paddingBottom: 15,
         background: 'white',
-        minWidth: 210,
+        maxWidth: 200
     },
     valueImg: {
         paddingLeft: 10,

@@ -30,16 +30,16 @@ export default function Product() {
 
       <body>
           <div className='columns ourcompany' style={{ background: '#324A9F', display:'flex', flex:1, marginTop:20,marginBottom:20 }}>
-            <div className='has-text-centered' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:80 }}> 
-              <p className='title' style={{ color:'white', alignSelf:'center' }}>OUR PRODUCT</p>
-              <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
+            <div className='has-text-centered column' style={{ alignItems:'center', justifyContent:'center',alignContent:'center',textAlign:'center',padding:80 }}> 
+              <Typography variant='h2' style={{ color:'white', alignSelf:'center' }}>OUR PRODUCT</Typography>
+              <Typography variant='h6' style={{ color:'white', alignSelf:'center' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-               </p>
-               <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
+               </Typography>
+               <Typography variant='p' style={{ color:'white', alignSelf:'center' }}>
                 Home > Our Products > Fair Ride
-               </p>
+               </Typography>
             </div>
-            <img src='/our-company.png' />
+            <img className='column is-half' src='/our-company.png' style={{ maxHeight: 500 }} />
           </div>
           <div className='mt-6'></div>
           <UpcomingProjectsCarousel/>
