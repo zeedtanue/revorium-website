@@ -4,11 +4,8 @@ import { Card,
   CardActionArea, 
   CardActions } from '@material-ui/core'
 import Head from 'next/head'
-import Image from 'next/image'
 import { Button } from '../components/StyledComponent'
-import styles from '../styles/Home.module.css'
 import useStyles from '../styles/Products.Styles'
-import CaoruselServices from '../components/CarouselServices'
 export default function Home() {
 
   const classes = useStyles()
