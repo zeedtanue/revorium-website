@@ -48,7 +48,7 @@ const UpcomingProjectsCarousel = () => {
             onClick={()=> position !== 0? setPosition(position-1):setPosition(2)}
             sx={{ color: '#C6C6C6'}} aria-label="upload picture" component="span">
             <ArrowBackIos sx={{ color: '#C6C6C6'}}/>
-          </IconButt    on>
+          </IconButton>
 
           <img className={`column ${classes.image}`} src={details[position].img1} height='20px'/>
           <img className={`column ${classes.image}`}src={details[position].img2} />
