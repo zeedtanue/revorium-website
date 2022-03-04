@@ -36,7 +36,7 @@ export default function Company() {
               <p className='title' style={{ color:'white', alignSelf:'center' }}>Our Mission</p>
 
               <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
-                Home > Mission 
+                Home &gt; Mission 
                </p>
                
             </div>

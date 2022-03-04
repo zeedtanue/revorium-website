@@ -36,7 +36,7 @@ export default function Product() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                </Typography>
                <Typography variant='p' style={{ color:'white', alignSelf:'center' }}>
-                Home > Our Products > Fair Ride
+                Home &gt; Our Products &gt; Fair Ride
                </Typography>
             </div>
             <img className='column is-half' src='/our-company.png' style={{ maxHeight: 500 }} />

@@ -8,7 +8,7 @@ export const SubBanner = () => {
              Contact Us
             </p>
             <p className='subtitle'>
-                Home > Contact Us
+                Home &gt; Contact Us
             </p>
             
         </div>

@@ -54,7 +54,7 @@ export default function Blog() {
               <p className='title' style={{ color:'white', alignSelf:'center' }}>Blog</p>
 
               <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
-                Home > Blog 
+                Home &gt; Blog 
                </p>
                
             </div>

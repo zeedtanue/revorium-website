@@ -54,7 +54,7 @@ const Service = () => {
               <p className='title' style={{ color:'white', alignSelf:'center' }}>Service <br/> Software Development</p>
 
               <p className='subtitle' style={{ color:'white', alignSelf:'center' }}>
-                Home > Service > Software Development
+                Home &gt; Service &gt; Software Development
                </p>
                
             </div>
