@@ -1,10 +1,27 @@
-import { Typography } from '@material-ui/core'
+import { Card, 
+  CardContent, 
+  Typography, 
+  CardActionArea, 
+  CardActions } from '@material-ui/core'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Button } from '../components/StyledComponent'
 import styles from '../styles/Home.module.css'
-
+import useStyles from '../styles/Products.Styles'
+import CaoruselServices from '../components/CarouselServices'
 export default function Home() {
+
+  const classes = useStyles()
+
+  const servicesData = [
+    {title: 'Software Development', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'Blockchain Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'Software Developmen', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+    {title: 'AI Technology', desc: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', image: '/softwareDevelopment.png'},
+
+  ]
+
   return (
     <div>
       <Head>
@@ -57,6 +74,104 @@ export default function Home() {
           </div>
 
         </div>
+
+
+
+        {/* Carousel for the products */}
+        <div className='columns'>
+        {servicesData.map(item =>
+           <div class={`column ${classes.mainFeatureBox}`} >    
+            <Card className={classes.card}>
+              <CardActionArea>
+                <img className={classes.cardImage} src={item.image} />
+                  <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                    {item.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {item.desc}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+          
+          )}
+          </div>
+
+
+           {/* Upcoming projects */}
+
+           <div className={`has-text-centered mt-6 ${classes.bottomContainer}`} style={{ 
+             backgroundColor: '#F9F9FC' ,
+             display: 'flex',
+             flexDirection: 'column',
+             padding: 50,
+             paddingTop:90}}>
+             <Typography variant='h4' component="div">
+               Upcoming Projects that We <br/>
+              are Making
+             </Typography>
+
+             <div className='mt-6 is-offset' style={{ 
+               padding:30,
+               maxWidth: 964,
+               alignSelf:'center',
+               maxHeight:311, 
+               backgroundColor:'white' }}>
+               <div className='columns'>
+                 <img className='column' src='/logoBig.png' style={{ height:100, maxWidth:400}}/>
+                 <Typography variant='h3' className='column mt-8'>Fair Ride</Typography>
+
+               </div>
+               <Typography>
+               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+               </Typography>
+
+             </div>
+             <Button className='mt-4' style={{ alignSelf:'center' }} backgroundColor='#020283' color='white'>See More</Button>
+
+
+
+
+             <div className=' has-text-centered ourcompany columns' 
+          style={{ 
+            alignSelf:'center',
+            justifyContent:'center',
+            padding:80 ,
+            zIndex:999,
+            marginTop:40,
+            color: 'white',
+            maxWidth: 1100,
+            minHeight: 220,
+            marginBottom:-100,
+            maxHeight:120,
+            background: '#020283', 
+            display:'flex', 
+            flex:1, 
+            backgroundImage: " url('/Polygon.png')",  
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+            }}>
+              <div className='column is-half'>
+              <Typography variant='h2' component='h2' style={{ color:'white' }}>
+              Have an idea in mind? 
+Get in touch with us and let's begin working on it!
+              </Typography>
+              </div>
+              <div className='column'>
+              <Button  color='#020283'>See More</Button>
+
+                </div>            
+          </div>
+
+
+
+           </div>
+
+
+           
+
 
         
       </main>
