@@ -1,8 +1,6 @@
 import { Card, 
   CardContent, 
-  CardMedia, 
   Typography, 
-  Button, 
   CardActionArea, 
   CardActions } from '@material-ui/core'
 import Head from 'next/head'
