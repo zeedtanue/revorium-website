@@ -16,7 +16,7 @@ const NavBar = () => {
                     <img style={{ height:300  , width:200 }} src="/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="268" height="100"/>
 
                     </a>
-                    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                    <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
                       <a onClick={() => {
                         setisActive(!isActive);
                         }}>

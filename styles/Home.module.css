@@ -1,7 +1,11 @@
 .container {
-  padding: 0 2rem;
+ /*  padding: 0 2rem; */
 }
 
+.subpagebanner-body {
+  padding: 5rem 4.5rem !important;
+}
+ 
 .main {
   min-height: 100vh;
   padding: 4rem 0;
