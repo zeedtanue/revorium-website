@@ -13,7 +13,7 @@ const NavBar = () => {
                 <Link passHref href={"/"}>
                     
                     <a className="navbar-item is-size-2 has-text-weight-bold" href="../">
-                    <img style={{ minHeight:50,  maxWidth:200 }} src="/logoBig.png" alt="Bulma: a modern CSS framework based on Flexbox" width="268" height="100"/>
+                    <img style={{ minHeight:50,  maxWidth:200 }} src="/logoBig.png" alt="Revorium logo" width="268" height="100"/>
 
                     </a>
                     </Link>
